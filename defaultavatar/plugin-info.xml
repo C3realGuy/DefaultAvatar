@@ -1,0 +1,22 @@
+<?xml version="1.0" standalone="yes" ?>
+<plugin id="CerealGuy:DefaultAvatar">
+	<name>Default Avatar</name>
+	<author>CerealGuy</author>
+	<description>Set a default Avatar which is used when use didnt defined one on his own.</description>
+	<version>1.0</version>
+	<settings>
+		<setting name="defaultavatar_href" default="" />
+
+	</settings>
+	<settings-page area="hidemod">
+		<language file="DefaultAvatarAdmin" />
+		<text name="defaultavatar_href" />
+	</settings-page>
+
+
+	<hooks>
+		<function point="menu_items" function="da_menu_items" filename="$plugindir/DefaultAvatar" />
+	</hooks>
+	<acp-url>action=admin;area=hidemod</acp-url>
+
+</plugin>
